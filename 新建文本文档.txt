@@ -1,0 +1,35 @@
+发射端发送
+{
+	cmd:"query_cast_status",
+	SenderIp:"192.168.9.21",
+	SessionType:1  //0:airplay 1:bjcast
+}
+
+
+接收端回复
+{
+	cmd:"query_cast_status_rsp",
+	SenderIp:"192.168.9.21",
+	SessionType:1,   //0:airplay 1:bjcast
+	status:0      //0:已经投屏 1：未投屏
+}
+
+
+结束投屏:
+发射端发送：
+{
+	cmd:"stop_cast",
+	SenderIp:"192.168.9.21",  //发射端IP地址
+	SessionType:0  //0:airplay 1:bjcast
+}
+
+接收端不回消息
+
+
+
+selector channel 
+
+
+map
+json
+java udp socket
